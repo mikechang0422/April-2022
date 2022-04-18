@@ -1,0 +1,203 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  font-family: Butler, Lato, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #c9c9c9;
+}
+
+.card {
+  position: relative;
+  width: 30rem;
+  height: 40rem;
+  background-color: #fff;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(100rem);
+          transform: perspective(100rem);
+  -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.25);
+          box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.card .imgBox {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.25);
+          box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card .imgBox img:nth-child(2) {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(30deg, sienna, cornsilk);
+}
+
+.card .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .content h2 {
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-shadow: 1px 1px 3px sienna;
+}
+
+.card .content h2 span {
+  font-size: 0.8em;
+  color: sienna;
+}
+
+.card .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .social-icons a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 1px 1px 5px sienna;
+          box-shadow: 1px 1px 5px sienna;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.card .social-icons a:hover {
+  background-color: sienna;
+  outline: 1px solid sienna;
+  -webkit-box-shadow: 1px 1px 5px sienna, 2px 2px 7px sienna, 3px 3px 9px #333;
+          box-shadow: 1px 1px 5px sienna, 2px 2px 7px sienna, 3px 3px 9px #333;
+}
+
+.card:hover {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.card:hover .imgBox {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 45%;
+  }
+}
+/*# sourceMappingURL=p1.css.map */
